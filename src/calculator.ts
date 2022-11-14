@@ -1,21 +1,24 @@
-// import * as readline from 'node:readline';
+const pro = require('prompt');
 
-// let a;
-// let b;
+pro.start();
 
+pro.get(['num1', 'num2','op'], function (err:any, result:any) {
+    if (result.op ==='+'){
+        console.log(Number(result.num1)+ Number(result.num2 ));
 
-// const readline = require('readline').createInterface({
-//     input: process.stdin,
-//     output: process.stdout
-//   });
-  
-//   readline.question('Number One?', a => {
-//     console.log(`Hey there ${a}!`);
-//     readline.close();
-//   });
+    }
+    if (result.op ==='-'){
+        console.log(Number(result.num1)- Number(result.num2 ));
 
+    }
+    if (result.op ==='*'){
+        console.log(Number(result.num1)*Number(result.num2 ));
 
-const prompt = require('prompt-sync')();
+    }
+    if (result.op ==='/'){
+        console.log(Number(result.num1)/ Number(result.num2 ));
 
-const a = prompt('What is your name?');
-console.log(`Hey there ${a}`);
+    }
+// Printing the result
+
+})
